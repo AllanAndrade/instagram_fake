@@ -120,15 +120,14 @@ body {
 }
 
 .app-download:nth-child(1) {
-    background-image: url('./img/apple-button.png');
+    background-image: url("../img/apple-button.png");
 }
 
 .app-download:nth-child(2) {
-    background-image: url('./img/googleplay-button.png');
+    background-image: url("../img/googleplay-button.png");
 }
 
 /* media queries */
-
 
 @media (max-width: 1024px) {
     .instagram-wrapper {
@@ -152,7 +151,7 @@ body {
     .instagram-continue {
         width: 100%;
     }
-    
+
     .group {
         border: 1px solid transparent;
     }

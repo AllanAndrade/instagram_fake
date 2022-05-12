@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "target": "es2020",
+        "module": "commonjs",
+        "lib": ["es2020", "DOM", "es2020.String",  "dom.iterable"],
+        "outDir": "./dist",
+        "sourceMap": true,
+        "typeRoots": ["./node_modules/@types", "./src/@types"],
+        "noEmitOnError": true,
+        "removeComments": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+                    
+            "@html/*": ["./src/html/*"],
+            "@img/*":  ["./src/img/*"],
+            "@ts/*":   ["./src/ts/*"],
+            "@scss/*": ["./src/scss/*"],
+        }
+    },
+    "include": ["src/**/*"],
+    "exclude": []
+}
