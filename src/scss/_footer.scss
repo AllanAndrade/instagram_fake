@@ -1,0 +1,43 @@
+footer {
+    display: flex;
+    color: rgba(var(--f52, 142, 142, 142), 1);
+    a {
+        color: rgba(var(--f52, 142, 142, 142), 1);
+    }
+
+    .conteudo {
+        width: 100%;
+        .duas_linhas {
+            .linha1,
+            .linha2 {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                margin-bottom: 1em;
+                .iten_link_rodape {
+                    margin-left: 1.2em;
+                }
+            }
+        }
+
+        .linha3 {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-self: center;
+
+            .idioma {
+                display: flex;
+                flex-flow: row wrap;
+                width: 11em;
+                .icone {
+                    position: relative;
+                    left: 0.5em;
+                }
+            }
+            .select {
+                display: none;
+            }
+        }
+    }
+}

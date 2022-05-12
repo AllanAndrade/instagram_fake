@@ -1,11 +1,12 @@
 // const multipleHtmlPlugins = require('./webpack.config.html.multiplo');
-
+const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   mode: "development",
   devtool: "inline-source-map",
+  context: path.resolve(__dirname, ".."),
   devServer: {
     liveReload: true,
     hot: false,
