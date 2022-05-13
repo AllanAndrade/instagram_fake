@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --static-watch   --compress --http2 --https  --open --config webpack/webpack.dev.js",
-    "build": "webpack --config webpack/webpack.prod.js"
+    "start": "webpack serve  --progress --open --config webpack/webpack.dev.js",
+    "run": "webpack serve --watch --progress --open --config webpack/webpack.config.js",
+    "build": "webpack --node-env production --env production --config webpack/webpack.prod.js"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",

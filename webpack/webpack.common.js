@@ -19,25 +19,22 @@ const regra_scss = require("./cfg_rules/scss");
 // exporta configurações gerais (comuns a DEV e PROD)
 module.exports = {
   entry: ["./src/ts/main.ts"],
-  output: {
-    filename: "[name].bundle.js",
-    clean: true,
-    path: path.resolve(__dirname, "../dist"),
-    filename: "[name].[hash:8].js",
-    sourceMapFilename: "[name].[hash:8].map",
-    chunkFilename: "[id].[hash:8].js",
-  },
+
   plugins: [
+    /*
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
     }),
-    new MiniCssExtractPlugin(),
-    new CleanWebpackPlugin(),
+    */
+    //new MiniCssExtractPlugin(),
+    //new CleanWebpackPlugin(),
   ].concat(multipleHtmlPlugins),
+
   resolveLoader: {
     modules: ["node_modules", path.resolve(__dirname, "loaders")],
   },
+
   module: {
     rules: [regra_typescript, regra_html, regra_scss],
   },
@@ -51,5 +48,14 @@ module.exports = {
     },
 
     extensions: [".ts", ".js"], // Com isso, não é necessário informar as extensões nos requires / imports
+  },
+
+  output: {
+    clean: true,
+    sourceMapFilename: "[name].[hash:8].map",
+    chunkFilename: "[id].[hash:8].js",
+    path: path.resolve(__dirname, "../dist"),
+    filename: "assets/[name].bundle.js",
+    assetModuleFilename: "assets/[name][ext]", // <--- Define o nome dos assets no HTML
   },
 };
